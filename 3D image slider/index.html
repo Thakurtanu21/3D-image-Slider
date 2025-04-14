@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3D Image Slider</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <div class="carousel-container">
+    <div class="carousel" id="carousel">
+      <img src="image/img2.jpg" alt="1">
+      <p class="caption">My 1st Image</p>
+      <img src="image/image/image4.jpg" alt="image4">
+      <p class="caption">My 2nd Image</p>
+      <img src="src/image/image/image1.jpg" alt="image1">
+      <p class="caption">My 3rd Image</p>
+      <img src="img/image3.jpg" alt="image3">
+      <p class="caption">My 4th Image</p>
+    </div>
+
+    <!-- Music Audio Tag (no autoplay) -->
+    <audio id="bgMusic" loop>
+      <source src="music/background.mp3" type="audio/mpeg">
+      Your browser does not support the audio tag.
+    </audio>
+
+    <!-- Music Play Button -->
+    <button onclick="playMusic()">🔊 Play Music</button>
+    <div id="loginBox">
+      <h2>Login</h2>
+      <input type="text" id="username" placeholder="Username">
+      <input type="password" id="password" placeholder="Password">
+      <button onclick="login()">Login</button>
+    </div>
+    
+    <div id="sliderSection" style="display: none;">
+      <!-- your existing carousel code here -->
+    </div>
+    
+    <!-- Image Slider Buttons -->
+    <button id="prev">⟨</button>
+    <button id="next">⟩</button>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+     function playMusic() {
+      const audio = document.getElementById("bgMusic");
+      audio.play().then(() => {
+        console.log("Music started!");
+      }).catch(err => {
+        console.log("Music play error:", err);
+      });
+    }
+    function login(event) {
+    event.preventDefault(); 
+    }
+  </script>
+</body>
+</html>
+

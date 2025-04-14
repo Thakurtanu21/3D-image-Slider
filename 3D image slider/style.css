@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+.carousel-container {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  perspective: 1000px;
+}
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+.carousel img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 3px solid white;
+  border-radius: 20px;
+}
+.carousel-item::after {
+  content: "© 2025 Tanu";
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  font-weight: bold;
+}
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ffffff80;
+  border: none;
+  padding: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: purple;
+  z-index: 10;
+  border-radius: 50%;
+}
+.carousel-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+}
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.caption {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 0 5px black;
+}
+#prev {
+  left: -60px;
+}
+#next {
+  right: -60px;
+}
